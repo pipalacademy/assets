@@ -52,3 +52,13 @@ $ cd assets/jquery
 $ ln -s ../../vendor/jquery-3.6.1 3.6.1
 $ ln -s ../../vendor/jquery-3.6.1 3
 ```
+
+## Deploying
+
+To deploy the assets, run make after pushing it to github. Github CI/CD is not setup yet.
+
+```
+$ make
+ssh -A pipal@pipal.in git -C assets pull
+Already up-to-date.
+```
