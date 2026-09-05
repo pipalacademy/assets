@@ -55,7 +55,14 @@ $ ln -s ../../vendor/jquery-3.6.1 3
 
 ## Deploying
 
-To deploy the assets, run make after pushing it to github. Github CI/CD is not setup yet.
+Pushing to `main` automatically deploys the `assets/` directory to GitHub Pages
+(see `.github/workflows/gh-pages.yml`), served at <https://assets.pipal.in/>.
+
+Symlinks under `assets/` are resolved to real files during the build, since
+GitHub Pages does not reliably serve symlinked files.
+
+The repository still has the old SSH-based deploy path (`make deploy`), kept
+here in case it's still needed for other hosts:
 
 ```
 $ make
